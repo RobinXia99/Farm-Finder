@@ -12,16 +12,20 @@ struct FarmEntryView : View {
     
     var body: some View {
         ScrollView {
-            VStack{
+            
+            VStack {
+                
                 MapView(coordinate: entry.coordinate, entry: entry)
                     .ignoresSafeArea(edges: .top)
                     .frame(height: 400)
                 
                 Button(action: {
+                    
                     let url = URL(string: "maps://?saddr=&daddr=\(entry.latitude),\(entry.longitude)")
                     if UIApplication.shared.canOpenURL(url!) {
                         UIApplication.shared.open(url!, options: [:], completionHandler: nil)
                     }
+                    
                 }, label: {
                     Text("DRIVE THERE")
                         .foregroundColor(Color.white)
@@ -44,8 +48,11 @@ struct FarmEntryView : View {
                         .shadow(radius: 7)
                         .offset(y: -130)
                         .padding(.bottom, -130)
+                    
                 }  placeholder: {
+                    
                     ProgressView()
+                    
                     Image(systemName: "photo")
                         .resizable()
                         .frame(width: 300, height: 300, alignment: .center)
@@ -60,14 +67,17 @@ struct FarmEntryView : View {
                 }
                 
                 VStack(alignment: .leading) {
+                    
                     Text(entry.name)
                         .font(.title)
+                    
                     HStack {
                         Text(entry.location ?? "Handen").font(.subheadline)
                         Spacer()
                     }
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    
                     Divider()
                     
                     Text("About The Farm")

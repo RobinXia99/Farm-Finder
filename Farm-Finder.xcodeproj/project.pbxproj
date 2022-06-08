@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0052D5C02850835000FCA8A2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052D5BF2850834F00FCA8A2 /* UserViewModel.swift */; };
+		0052D5C2285083C900FCA8A2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052D5C1285083C900FCA8A2 /* AuthService.swift */; };
+		0052D5C528508D8300FCA8A2 /* FarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052D5C428508D8200FCA8A2 /* FarmService.swift */; };
+		0052D5C728508DCF00FCA8A2 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052D5C628508DCF00FCA8A2 /* StorageService.swift */; };
+		0067C8F22850A8CE00424E6E /* FarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067C8F12850A8CE00424E6E /* FarmListView.swift */; };
+		0067C8F42850AC5A00424E6E /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067C8F32850AC5A00424E6E /* EditProfileView.swift */; };
+		0067C8F72850ACBC00424E6E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067C8F62850ACBC00424E6E /* SignUpView.swift */; };
 		B3584577279EAD9900332F2E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3584576279EAD9900332F2E /* ImagePicker.swift */; };
 		B358457A27A00CE600332F2E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B358457927A00CE600332F2E /* FirebaseStorage */; };
 		B386CEBB279808C800936734 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B386CEBA279808C800936734 /* FirebaseAuth */; };
@@ -21,7 +28,7 @@
 		B3DAB113278ECD2100CCC029 /* Farm_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB112278ECD2100CCC029 /* Farm_FinderUITests.swift */; };
 		B3DAB115278ECD2100CCC029 /* Farm_FinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB114278ECD2100CCC029 /* Farm_FinderUITestsLaunchTests.swift */; };
 		B3DAB122278ED14800CCC029 /* FarmEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB121278ED14800CCC029 /* FarmEntry.swift */; };
-		B3DAB124278ED29200CCC029 /* FarmPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB123278ED29200CCC029 /* FarmPage.swift */; };
+		B3DAB124278ED29200CCC029 /* FarmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB123278ED29200CCC029 /* FarmsViewModel.swift */; };
 		B3DAB126278ED5BD00CCC029 /* FarmEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB125278ED5BD00CCC029 /* FarmEntryView.swift */; };
 		B3DAB12A278EDEBF00CCC029 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB129278EDEBF00CCC029 /* MapView.swift */; };
 		B3DAB12C278EE1FE00CCC029 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB12B278EE1FE00CCC029 /* LocationManager.swift */; };
@@ -46,6 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0052D5BF2850834F00FCA8A2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		0052D5C1285083C900FCA8A2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0052D5C428508D8200FCA8A2 /* FarmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmService.swift; sourceTree = "<group>"; };
+		0052D5C628508DCF00FCA8A2 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		0067C8F12850A8CE00424E6E /* FarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmListView.swift; sourceTree = "<group>"; };
+		0067C8F32850AC5A00424E6E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		0067C8F62850ACBC00424E6E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B3584576279EAD9900332F2E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B367F25727B31F60005EB3BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B386CEC227982AF000936734 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -60,7 +74,7 @@
 		B3DAB112278ECD2100CCC029 /* Farm_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farm_FinderUITests.swift; sourceTree = "<group>"; };
 		B3DAB114278ECD2100CCC029 /* Farm_FinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farm_FinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B3DAB121278ED14800CCC029 /* FarmEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmEntry.swift; sourceTree = "<group>"; };
-		B3DAB123278ED29200CCC029 /* FarmPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmPage.swift; sourceTree = "<group>"; };
+		B3DAB123278ED29200CCC029 /* FarmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmsViewModel.swift; sourceTree = "<group>"; };
 		B3DAB125278ED5BD00CCC029 /* FarmEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmEntryView.swift; sourceTree = "<group>"; };
 		B3DAB129278EDEBF00CCC029 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B3DAB12B278EE1FE00CCC029 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -96,6 +110,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0052D5BB285014E300FCA8A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0052D5BE2850159B00FCA8A2 /* Firebase */,
+				B3DAB121278ED14800CCC029 /* FarmEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0052D5BC285014EF00FCA8A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0067C8F52850AC8B00424E6E /* Registration */,
+				B3DAB129278EDEBF00CCC029 /* MapView.swift */,
+				0067C8F12850A8CE00424E6E /* FarmListView.swift */,
+				B3DAB125278ED5BD00CCC029 /* FarmEntryView.swift */,
+				B3DAB0F9278ECD1700CCC029 /* ContentView.swift */,
+				B3584576279EAD9900332F2E /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0052D5BD285014F700FCA8A2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B3DAB12B278EE1FE00CCC029 /* LocationManager.swift */,
+				B3DAB123278ED29200CCC029 /* FarmsViewModel.swift */,
+				0052D5BF2850834F00FCA8A2 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0052D5BE2850159B00FCA8A2 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				0052D5C1285083C900FCA8A2 /* AuthService.swift */,
+				0052D5C428508D8200FCA8A2 /* FarmService.swift */,
+				0052D5C628508DCF00FCA8A2 /* StorageService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		0067C8F52850AC8B00424E6E /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				B3DAB16A27919B6200CCC029 /* LoginView.swift */,
+				0067C8F62850ACBC00424E6E /* SignUpView.swift */,
+				0067C8F32850AC5A00424E6E /* EditProfileView.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		B358457827A00CE400332F2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				B386CEC227982AF000936734 /* GoogleService-Info.plist */,
-				B3DAB12B278EE1FE00CCC029 /* LocationManager.swift */,
-				B3DAB129278EDEBF00CCC029 /* MapView.swift */,
 				B3DAB0F6278ECD1700CCC029 /* Farm-Finder */,
 				B3DAB107278ECD2100CCC029 /* Farm-FinderTests */,
 				B3DAB111278ECD2100CCC029 /* Farm-FinderUITests */,
@@ -130,16 +194,13 @@
 		B3DAB0F6278ECD1700CCC029 /* Farm-Finder */ = {
 			isa = PBXGroup;
 			children = (
+				0052D5BB285014E300FCA8A2 /* Models */,
+				0052D5BC285014EF00FCA8A2 /* Views */,
+				0052D5BD285014F700FCA8A2 /* ViewModels */,
 				B367F25727B31F60005EB3BF /* Info.plist */,
 				B3DAB0F7278ECD1700CCC029 /* Farm_FinderApp.swift */,
-				B3DAB0F9278ECD1700CCC029 /* ContentView.swift */,
-				B3584576279EAD9900332F2E /* ImagePicker.swift */,
-				B3DAB125278ED5BD00CCC029 /* FarmEntryView.swift */,
-				B3DAB123278ED29200CCC029 /* FarmPage.swift */,
 				B3DAB0FB278ECD1F00CCC029 /* Assets.xcassets */,
 				B3DAB0FD278ECD1F00CCC029 /* Preview Content */,
-				B3DAB121278ED14800CCC029 /* FarmEntry.swift */,
-				B3DAB16A27919B6200CCC029 /* LoginView.swift */,
 			);
 			path = "Farm-Finder";
 			sourceTree = "<group>";
@@ -309,12 +370,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0067C8F42850AC5A00424E6E /* EditProfileView.swift in Sources */,
 				B3DAB12A278EDEBF00CCC029 /* MapView.swift in Sources */,
-				B3DAB124278ED29200CCC029 /* FarmPage.swift in Sources */,
+				B3DAB124278ED29200CCC029 /* FarmsViewModel.swift in Sources */,
+				0067C8F22850A8CE00424E6E /* FarmListView.swift in Sources */,
 				B3DAB126278ED5BD00CCC029 /* FarmEntryView.swift in Sources */,
+				0052D5C02850835000FCA8A2 /* UserViewModel.swift in Sources */,
 				B3584577279EAD9900332F2E /* ImagePicker.swift in Sources */,
+				0052D5C2285083C900FCA8A2 /* AuthService.swift in Sources */,
 				B3DAB0FA278ECD1700CCC029 /* ContentView.swift in Sources */,
+				0052D5C728508DCF00FCA8A2 /* StorageService.swift in Sources */,
+				0052D5C528508D8300FCA8A2 /* FarmService.swift in Sources */,
 				B3DAB12C278EE1FE00CCC029 /* LocationManager.swift in Sources */,
+				0067C8F72850ACBC00424E6E /* SignUpView.swift in Sources */,
 				B3DAB122278ED14800CCC029 /* FarmEntry.swift in Sources */,
 				B3DAB16B27919B6200CCC029 /* LoginView.swift in Sources */,
 				B3DAB0F8278ECD1700CCC029 /* Farm_FinderApp.swift in Sources */,

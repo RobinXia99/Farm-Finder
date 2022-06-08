@@ -29,13 +29,9 @@ struct MapView: View {
             MapMarker(coordinate: entry.coordinate, tint: .red)
             
         }
-        
-        
-        
-            .onAppear {
-                setRegion(coordinate)
-                
-            }
+        .onAppear {
+            setRegion(coordinate)
+        }
     }
     
     private func setRegion(_ coordinate: CLLocationCoordinate2D){
