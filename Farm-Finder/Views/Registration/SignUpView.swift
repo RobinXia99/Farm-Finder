@@ -10,10 +10,12 @@ import SwiftUI
 struct SignUpView: View {
     
     @EnvironmentObject var userViewModel : UserViewModel
+    
     @State var email  = ""
     @State var password  = ""
     @State var verifyPassword = ""
     @State var showingPassword = false
+    
     @State private var keyboardHeight: CGFloat = 100
     
     var body: some View {

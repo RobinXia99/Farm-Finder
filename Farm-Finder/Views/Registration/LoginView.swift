@@ -9,13 +9,14 @@ import SwiftUI
 import FirebaseAuth
 
 
-
 struct LoginView: View {
+    
+    @EnvironmentObject var userViewModel : UserViewModel
     
     @State var email  = ""
     @State var password  = ""
     @State var showingPassword = false
-    @EnvironmentObject var userViewModel : UserViewModel
+    
     @State private var keyboardHeight: CGFloat = 140
     
     var body: some View {

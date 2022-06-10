@@ -20,13 +20,16 @@ struct EditProfileView : View {
     
     @State var showActionSheet = false
     @State var showImagePicker = false
+    @State private var showingLocationSheet = false
+    
     @State var sourceType : UIImagePickerController.SourceType = .camera
     @State var uploadImage : UIImage?
+    
     @State var descriptionText : String = ""
     @State var nameFieldText : String = ""
     @State var locationTextField : String = ""
     @State private var imageURL = URL(string:"")
-    @State private var showingLocationSheet = false
+    
     @State var entry: FarmEntry? = nil
     
     @State var tapped = false
