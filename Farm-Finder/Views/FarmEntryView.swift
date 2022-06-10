@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct FarmEntryView : View {
+    
     var entry: FarmEntry
     
     var body: some View {
+        
         ScrollView {
             
             VStack {

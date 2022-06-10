@@ -14,8 +14,8 @@ struct LoginView: View {
     
     @State var email  = ""
     @State var password  = ""
-    @State var visible = false
-    @EnvironmentObject var user : UserViewModel
+    @State var showingPassword = false
+    @EnvironmentObject var userViewModel : UserViewModel
     @State private var keyboardHeight: CGFloat = 140
     
     var body: some View {
@@ -62,7 +62,7 @@ struct LoginView: View {
                 
                 HStack(spacing: 15){
                     
-                    if self.visible {
+                    if self.showingPassword {
                         TextField("Password", text: $password)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
@@ -75,21 +75,21 @@ struct LoginView: View {
                         
                     }
                     Button(action: {
-                        self.visible.toggle()
+                        self.showingPassword.toggle()
                     },label: {
                         
-                        Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
+                        Image(systemName: self.showingPassword ? "eye.slash.fill" : "eye.fill")
                             .foregroundColor(Color.primary)
                     })
                 }
                 .padding()
                 .background(Color(.secondarySystemBackground))
                 
-                NavigationLink(destination: EditProfileView(),isActive: $user.signedIn){EmptyView()
+                NavigationLink(destination: EditProfileView(),isActive: $userViewModel.signedIn){EmptyView()
                 }
                 Button(action: {
                     
-                    user.signIn(email: email, password: password)
+                    userViewModel.signIn(email: email, password: password)
                     
                 }, label: {
                     Text("Login")

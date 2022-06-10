@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @EnvironmentObject var user : UserViewModel
+    @EnvironmentObject var userViewModel : UserViewModel
     @State var email  = ""
     @State var password  = ""
     @State var verifyPassword = ""
-    @State var visible = false
+    @State var showingPassword = false
     @State private var keyboardHeight: CGFloat = 100
     
     var body: some View {
@@ -33,7 +33,7 @@ struct SignUpView: View {
             
             HStack(spacing: 15){
                 
-                if self.visible {
+                if self.showingPassword {
                     TextField("Password", text: $password)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
@@ -46,10 +46,10 @@ struct SignUpView: View {
                 }
                 
                 Button(action: {
-                    self.visible.toggle()
+                    self.showingPassword.toggle()
                 },label: {
                     
-                    Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
+                    Image(systemName: self.showingPassword ? "eye.slash.fill" : "eye.fill")
                         .foregroundColor(Color.primary)
                     
                 })
@@ -59,7 +59,7 @@ struct SignUpView: View {
             
             HStack(spacing: 15){
                 
-                if self.visible {
+                if self.showingPassword {
                     TextField("Retype Password", text: $verifyPassword)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
@@ -70,10 +70,10 @@ struct SignUpView: View {
                         .autocapitalization(.none)
                 }
                 Button(action: {
-                    self.visible.toggle()
+                    self.showingPassword.toggle()
                 },label: {
                     
-                    Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
+                    Image(systemName: self.showingPassword ? "eye.slash.fill" : "eye.fill")
                         .foregroundColor(Color.primary)
                     
                 })
@@ -82,18 +82,18 @@ struct SignUpView: View {
             .background(Color(.secondarySystemBackground))
             
             
-            NavigationLink(destination: LoginView() ,isActive: $user.signedIn){EmptyView()
+            NavigationLink(destination: LoginView() ,isActive: $userViewModel.signedIn){EmptyView()
             }
             Button(action: {
                 
                 if password == verifyPassword {
-                    user.signUp(email: email, password: password)
+                    userViewModel.signUp(email: email, password: password)
                     
                 } else {
                     
-                    visible = true
-                    password = "Type missmatch"
-                    verifyPassword = "Type missmatch"
+                    showingPassword = true
+                    password = "Type mismatch"
+                    verifyPassword = "Type mismatch"
                     
                 }
                 

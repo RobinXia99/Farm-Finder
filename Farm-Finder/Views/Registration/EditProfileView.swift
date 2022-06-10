@@ -11,7 +11,7 @@ import FirebaseAuth
 
 struct EditProfileView : View {
     
-    @EnvironmentObject var user : UserViewModel
+    @EnvironmentObject var userViewModel : UserViewModel
     @ObservedObject private var locationManager = LocationManager()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -20,13 +20,13 @@ struct EditProfileView : View {
     
     @State var showActionSheet = false
     @State var showImagePicker = false
-    @State var sourceType: UIImagePickerController.SourceType = .camera
+    @State var sourceType : UIImagePickerController.SourceType = .camera
     @State var uploadImage : UIImage?
     @State var descriptionText : String = ""
     @State var nameFieldText : String = ""
     @State var locationTextField : String = ""
     @State private var imageURL = URL(string:"")
-    @State private var showingSheet = false
+    @State private var showingLocationSheet = false
     @State var entry: FarmEntry? = nil
     
     @State var tapped = false
@@ -34,7 +34,8 @@ struct EditProfileView : View {
     var tap: some Gesture {
         TapGesture(count: 1)
             .onEnded { _ in self.tapped = !self.tapped
-                showingSheet = false
+                showingLocationSheet = false
+                print("tapped")
             }
     }
     
@@ -49,9 +50,8 @@ struct EditProfileView : View {
                 
                 Button(action: {
                     self.showActionSheet = true
-                    print("ADD PICTURE")
-                }
-                       , label: {
+                    
+                }, label: {
                     
                     if uploadImage != nil {
                         Image(uiImage: uploadImage!)
@@ -124,10 +124,10 @@ struct EditProfileView : View {
                         .cornerRadius(20)
                 }
                 Button("Save location on map") {
-                    showingSheet.toggle()
+                    showingLocationSheet.toggle()
                 }
                 
-                .sheet(isPresented: $showingSheet){
+                .sheet(isPresented: $showingLocationSheet){
                     if let entry = entry {
                         
                         MapView(coordinate: coordinate, entry: entry)
@@ -151,7 +151,7 @@ struct EditProfileView : View {
                             
                             self.entry?.latitude = coordinate.latitude
                             self.entry?.longitude = coordinate.longitude
-                            showingSheet = false
+                            showingLocationSheet = false
                             
                         }, label: {
                             
@@ -215,14 +215,15 @@ struct EditProfileView : View {
                     }
                     
                 }, label: {
+                    
                     Text("Save")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height:50)
                         .background(Color.blue)
                         .cornerRadius(25)
                 })
-                Spacer()
                 
+                Spacer()
                 
             }
             .padding()
@@ -240,7 +241,7 @@ struct EditProfileView : View {
                 nameFieldText = entry?.name ?? "Farm Name"
                 descriptionText = entry?.content ?? "Description of your farm"
                 locationTextField = entry?.location ?? "City"
-
+                
                 
             }
             

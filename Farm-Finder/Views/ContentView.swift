@@ -13,7 +13,7 @@ import MapKit
 
 struct ContentView: View {
     
-    @StateObject var user = UserViewModel()
+    @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
         
@@ -22,7 +22,7 @@ struct ContentView: View {
             LoginView()
             
         }
-        .environmentObject(user)
+        .environmentObject(userViewModel)
         
         
         
